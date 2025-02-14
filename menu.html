@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Kingdom's Railway Network</title>
+   <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+<div id="menu">
+    <h1>Railways</h1>
+    <input type="text" id="name" placeholder="WHO ARE YOU?" required/>
+    <br>
+    <h4>SET THE DIFFICULTY</h4>
+    <input type="radio" id="easy_mode" name="difficulty" value="5" checked><label for="easy_mode">5 x 5</label>
+    <input type="radio" id="hard_mode" name="difficulty" value="7"><label for="hard_mode">7 x 7</label>
+    <br>
+    <br>
+    <button id="start_button" type="button">START GAME</button>
+    <br>
+    <button id="rules_button">RULES</button>
+    <br>
+    <div id="rules">
+        <p id="rules_text" hidden>
+            The game is played on a square grid of various sizes, where the goal is to create a continuous circular railway
+            line that reaches every place where the train can travel.
+            <br>
+            The game ends when the player correctly completes the puzzle according to these rules:
+            <br>
+            - Each cell has two exit points, and the train can enter each neighboring cell from the correct direction.
+            <br>
+            - Every cell that needs to be touched is touched.
+            <br>
+            - Every cell where no track can be placed remains empty.
+        </p>
+    </div>
+</div>
+<div id="container">
+    <div id="NameAndTime" class="unselectable">
+        <h1 id="playerName">Player Name</h1>
+        <h1 id="timer">00:00</h1>
+    </div>
+    <div id="GameCanvas">
+        <canvas id="game"></canvas>
+    </div>
+</div>
+<div id="result_screen" hidden>
+    <h1 id="time_taken">lorem ipsum dolor sit amet</h1>
+    <button id="to_home_screen">To home screen</button>
+</div>
+<script src="menu.js"></script>
+</body>
+</html>
